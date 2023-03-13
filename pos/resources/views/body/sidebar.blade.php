@@ -35,7 +35,7 @@
                                 <a href="{{ route('all.employee') }}">All Employee</a>
                             </li>
                             <li>
-                                <a href="contacts-profile.html">Add Employee</a>
+                                <a href="{{ route('add.employee') }}">Add Employee</a>
                             </li>
                         </ul>
                     </div>

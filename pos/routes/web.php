@@ -58,6 +58,7 @@ Route::post('/admin/update/password', 'UpdatePassword')->name('update.password')
 Route::controller(EmployeeController::class)->group(function () {
 
     Route::get('/all/employee', 'AllEmployee')->name('all.employee');
+    Route::get('/add/employee', 'AddEmployee')->name('add.employee');
 
 
 });

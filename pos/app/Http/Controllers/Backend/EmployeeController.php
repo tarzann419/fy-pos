@@ -12,4 +12,8 @@ class EmployeeController extends Controller
         $employee = Employee::latest()->get();
         return view('backend.employee.employee_all', compact('employee'));
     }
+
+    public function AddEmployee(){
+        return view('backend.employee.add_employee');
+    }
 }
