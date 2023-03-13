@@ -37,6 +37,9 @@ require __DIR__.'/auth.php';
 
 
 Route::controller(AdminController::class)->group(function () {
+    Route::middleware(['auth'])->group(function(){
+
+    
 
 Route::get('/admin/logout', 'AdminDestroy')->name('admin.logout');
 Route::get('/logout', 'AdminLogoutPage')->name('admin.logout.page');
@@ -45,4 +48,5 @@ Route::post('/admin/profile/store', 'AdminProfileStore')->name('admin.profile.st
 Route::get('/admin/change/password', 'ChangePassword')->name('change.password');
 Route::post('/admin/update/password', 'UpdatePassword')->name('update.password');
 
+});
 });
