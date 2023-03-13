@@ -42,6 +42,7 @@ Route::get('/admin/logout', 'AdminDestroy')->name('admin.logout');
 Route::get('/logout', 'AdminLogoutPage')->name('admin.logout.page');
 Route::get('/admin/profile', 'AdminProfilePage')->name('admin.profile');
 Route::post('/admin/profile/store', 'AdminProfileStore')->name('admin.profile.store');
-Route::get('/admin/changepassword', 'ChangePassword')->name('change.password');
+Route::get('/admin/change/password', 'ChangePassword')->name('change.password');
+Route::post('/admin/update/password', 'UpdatePassword')->name('update.password');
 
 });
