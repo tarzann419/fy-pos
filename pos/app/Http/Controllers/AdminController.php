@@ -93,5 +93,10 @@ class AdminController extends Controller
         }
 
 
+        //update the new password
+        User::whereId(auth()->user()->id)->update([
+            
+        ])
+
     }
 }
