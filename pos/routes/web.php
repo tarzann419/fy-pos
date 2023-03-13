@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Backend\EmployeeController;
+use App\Models\Employee;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,4 +51,13 @@ Route::get('/admin/change/password', 'ChangePassword')->name('change.password');
 Route::post('/admin/update/password', 'UpdatePassword')->name('update.password');
 
 });
+});
+
+
+
+Route::controller(EmployeeController::class)->group(function () {
+
+    Route::get('/all/employee', 'AllEmployee')->name('all.employee');
+
+
 });

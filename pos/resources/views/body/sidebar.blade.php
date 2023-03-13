@@ -26,16 +26,16 @@
                 <li>
                     <a href="#sidebarContacts" data-bs-toggle="collapse">
                         <i class="mdi mdi-book-account-outline"></i>
-                        <span> Contacts </span>
+                        <span> Employee Manage </span>
                         <span class="menu-arrow"></span>
                     </a>
                     <div class="collapse" id="sidebarContacts">
                         <ul class="nav-second-level">
                             <li>
-                                <a href="contacts-list.html">Members List</a>
+                                <a href="{{ route('all.employee') }}">All Employee</a>
                             </li>
                             <li>
-                                <a href="contacts-profile.html">Profile</a>
+                                <a href="contacts-profile.html">Add Employee</a>
                             </li>
                         </ul>
                     </div>
