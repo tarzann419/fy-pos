@@ -4,7 +4,6 @@
 
 
 
-
 <div class="content">
 
     <!-- Start Content-->
@@ -33,7 +32,6 @@
                 <div class="card-body">
 
                     <!-- end timeline content-->
-
                     <div class="tab-pane" id="settings">
                         <form method="post" action="{{ route('update.password') }}">
                             @csrf
@@ -70,7 +68,7 @@
 
 
                             <div class="text-end">
-                                <button type="submit" class="btn betn-success waves-effect waves-light mt-2"><i class="mdi mdi-content-save"></i> Save Changes `</button>
+                                <button type="submit" class="btn btn-success waves-effect waves-light mt-2"><i class="mdi mdi-content-save"></i> Save Changes `</button>
                             </div>
                         </form>
                     </div>
@@ -85,22 +83,6 @@
     </div> <!-- container -->
 
 </div> <!-- content -->
-
-
-<!-- using this javascript function to add/display images on this page. we will also have to jquery and import it at the header of this page -->
-<!-- <script type="text/javascript">
-        $(document).ready(function() {
-            $('#image').change(function(e) {
-                var reader = new FileReader();
-                reader.onload = function(e) {
-                    $('#showImage').attr('src', e.target.result);
-                }
-                reader.readAsDataURL(e.target.files['0']);
-            });
-        });
-    </script> -->
-
-
 
 
 
