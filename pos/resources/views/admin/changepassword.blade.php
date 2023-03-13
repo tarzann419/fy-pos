@@ -37,17 +37,16 @@
                     <div class="tab-pane" id="settings">
                         <form method="post" action="{{ route('admin.profile.store') }}" enctype="multipart/form-data">
                             @csrf
-
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="name" class="form-label">Old Password</label>
-                                        <input type="password" class="form-control @error('old_password') is-invalid @enderror" id="current_password" name="old_password">
-                                        @error('old_password')
-                                        <span class="text-danger"> {{ $message }} </span>
-                                        @enderror
-                                    </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Old Password</label>
+                                    <input type="password" class="form-control @error('old_password') is-invalid @enderror" id="current_password" name="old_password">
+                                    @error('old_password')
+                                    <span class="text-danger"> {{ $message }} </span>
+                                    @enderror
                                 </div>
+                            </div>
+                            <div class="row">
 
                                 <div class="col-md-6">
                                     <div class="mb-3">
