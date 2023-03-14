@@ -16,4 +16,9 @@ class EmployeeController extends Controller
     public function AddEmployee(){
         return view('backend.employee.add_employee');
     }
+
+
+    public function StoreEmployee(Request $request){
+        
+    }
 }

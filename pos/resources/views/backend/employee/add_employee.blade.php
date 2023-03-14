@@ -21,7 +21,7 @@
                             <li class="breadcrumb-item active">Profile</li>
                         </ol>
                     </div>
-                    <h4 class="page-title">Profile</h4>
+                    <h4 class="page-title">ADD EMPLOYEE</h4>
                 </div>
             </div>
         </div>
@@ -36,7 +36,7 @@
                         <!-- end timeline content-->
 
                         <div class="tab-pane" id="settings">
-                            <form method="post" action="{{ route('admin.profile.store') }}" enctype="multipart/form-data">
+                            <form method="post" action="{{ route('employee.store') }}" enctype="multipart/form-data">
                                 @csrf
 
                                 <h5 class="mb-4 text-uppercase"><i class="mdi mdi-account-circle me-1"></i> Employee Info</h5>
