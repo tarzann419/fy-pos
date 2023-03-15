@@ -37,8 +37,8 @@ class EmployeeController extends Controller
 
         //checking the image
         $image = $request->file('image');
-        $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension(); //generate a name in id form
-        Image::make($image)->resize(300,300)->save('upload/employee/' . $name_gen);//to resize
+        $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension(); //generate a name in id form
+        Image::make($image)->resize(300,300)->save('upload/employee/'.$name_gen);//to resize
         $save_url = 'upload/employee/'.$name_gen;
 
         Employee::insert([
