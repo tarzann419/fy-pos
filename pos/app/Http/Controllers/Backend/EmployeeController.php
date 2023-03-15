@@ -84,20 +84,26 @@ class EmployeeController extends Controller
         Image::make($image)->resize(300, 300)->save('upload/employee/' . $name_gen);
         $save_url = 'upload/employee/' . $name_gen;
 
-        Employee::insert([
+        Employee::insert(
+            [
 
-            'name' => $request->name,
-            'email' => $request->email,
-            'phone' => $request->phone,
-            'address' => $request->address,
-            'experience' => $request->experience,
-            'salary' => $request->salary,
-            'vacation' => $request->vacation,
-            'city' => $request->city,
-            'image' => $save_url,
-            'created_at' => Carbon::now(),
+                'name' => $request->name,
+                'email' => $request->email,
+                'phone' => $request->phone,
+                'address' => $request->address,
+                'experience' => $request->experience,
+                'salary' => $request->salary,
+                'vacation' => $request->vacation,
+                'city' => $request->city,
+                'image' => $save_url,
+                'created_at' => Carbon::now(),
 
-        ]);
+            ],
+            [
+                // setting up custom error messages
+                'name.required' => 'This EMPLOYEE field is required',
+            ]
+        );
 
         $notification = array(
             'message' => 'Employee Inserted Successfully',
@@ -107,4 +113,13 @@ class EmployeeController extends Controller
         return redirect()->route('all.employee')->with($notification);
     } // End Method 
 
+    public function EditEmployee($id){
+
+        $employee = Employee::findOrFail($id);
+        return view('backend.employee.edit_employee', compact('employee'));
+    }
+
+    public function UpdateEmployee(Request $request){
+        
+    }
 }

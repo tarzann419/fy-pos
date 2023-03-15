@@ -51,7 +51,7 @@
 
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf
-<br>
+                                <br>
                                 <div class="mb-3">
                                     <label for="login" class="form-label">Email/Phone/Name</label>
                                     <input class="form-control @error('login') is-invalid @enderror" type="text" id="login" name="login" required="" placeholder="Enter your email/name/phone">
