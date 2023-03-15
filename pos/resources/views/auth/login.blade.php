@@ -47,10 +47,11 @@
                                     </a>
                                 </div>
                             </div>
+                            <br>
 
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf
-
+<br>
                                 <div class="mb-3">
                                     <label for="login" class="form-label">Email/Phone/Name</label>
                                     <input class="form-control @error('login') is-invalid @enderror" type="text" id="login" name="login" required="" placeholder="Enter your email/name/phone">
@@ -94,6 +95,7 @@
                     <div class="row mt-3">
                         <div class="col-12 text-center">
                             <p> <a href="auth-recoverpw.html" class="text-white-50 ms-1">Forgot your password?</a></p>
+                            <p class="text-white-50 ms-1"> Don't have an account? <a href="{{ url('/register') }}">Register</a> </p>
                         </div> <!-- end col -->
                     </div>
                     <!-- end row -->
