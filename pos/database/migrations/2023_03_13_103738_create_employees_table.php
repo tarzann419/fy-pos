@@ -18,12 +18,12 @@ return new class extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('phone');
-            $table->string('address')->nullable();
-            $table->string('experience')->nullable();
+            $table->string('address');
+            $table->string('experience');
             $table->string('image');
-            $table->string('salary')->nullable();
-            $table->string('vacation')->nullable();
-            $table->string('city')->nullable();
+            $table->string('salary');
+            $table->string('vacation');
+            $table->string('city');
             $table->timestamps();
         });
     }
